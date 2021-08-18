@@ -18,6 +18,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - name: 'Change to Admin directory'
+        working-directory: ./admin
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
