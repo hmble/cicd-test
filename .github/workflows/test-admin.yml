@@ -1,15 +1,9 @@
 name: Admin Build Test
 on:
-  push:
-    paths:
-      - 'admin/**'
-    branches:
-      - '**'
-      - '!main'
   pull_request:
-    branches: 
-      - '**'
-      - '!main'
+    # branches: 
+    #   - '**'
+    #   - '!main'
     paths: 
       - 'admin/**'
   
