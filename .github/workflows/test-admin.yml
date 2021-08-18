@@ -32,9 +32,10 @@ jobs:
         id: cache
         uses: actions/cache@v2
         with:
-          path: ./node_modules
-          key: modules-${{ hashFiles('package-lock.json') }}
-
+          path: ~/.npm
+          key: admin-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            admin-
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci --ignore-scripts
